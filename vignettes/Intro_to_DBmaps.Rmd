@@ -51,23 +51,6 @@ result <- merge_all_tables(
 head(result)
 ```
 
-## Merge Types
-
-DBmaps supports four merge types: - `"inner"`: Matches only common rows - `"left"`: Keeps all rows from first table - `"right"`: Keeps all rows from second table - `"full"`: Keeps all rows from both tables
-
-Example with different merge types:
-
-```{r merge_example}
-# Left join followed by full join
-result_alt <- merge_all_tables(
-  students, 
-  scores, 
-  attendance,
-  merge_type = "left",
-  final_merge_type = "full"
-)
-```
-
 # Best Practices
 
 1.  Verify unique identifiers in your key columns
