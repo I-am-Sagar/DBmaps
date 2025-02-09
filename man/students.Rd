@@ -11,6 +11,9 @@ A data.table with 4 rows and 2 variables:
 \item{Birthdate}{Date. Date of birth}
 }
 }
+\source{
+This data is manually created for demonstration purposes.
+}
 \usage{
 students
 }
@@ -20,5 +23,6 @@ The \code{students} dataset contains information about students and their birthd
 \examples{
 data(students)
 head(students)
+
 }
 \keyword{datasets}

@@ -12,6 +12,9 @@ A data.table with 3 rows and 3 variables:
 \item{quiz}{Numeric. Quiz scores}
 }
 }
+\source{
+This data is manually created for demonstration purposes.
+}
 \usage{
 scores
 }
@@ -21,5 +24,6 @@ The \code{scores} dataset contains students' homework and quiz scores.
 \examples{
 data(scores)
 head(scores)
+
 }
 \keyword{datasets}

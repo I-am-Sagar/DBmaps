@@ -10,6 +10,9 @@
 #' @examples
 #' data(students)
 #' head(students)
+#'
+#' @source
+#' This data is manually created for demonstration purposes.
 "students"
 
 #' Sample Student Scores Data
@@ -25,4 +28,26 @@
 #' @examples
 #' data(scores)
 #' head(scores)
+#'
+#' @source
+#' This data is manually created for demonstration purposes.
 "scores"
+
+#' Sample Attendance Data
+#'
+#' A dataset containing student IDs and their corresponding attendance records.
+#'
+#' @format A data.table with 5 rows and 2 variables:
+#' \describe{
+#'   \item{id}{Character. Unique identifier for each student.}
+#'   \item{attendance_days}{Integer. Number of days the student was present.}
+#' }
+#'
+#' @examples
+#' data(attendance)
+#' head(attendance)
+#'
+#' @source
+#' This data is manually created for demonstration purposes.
+"attendance"
+
