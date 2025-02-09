@@ -54,12 +54,12 @@ merge_all_tables <- function(x, y, z, by_col = "id", merge_type = "inner",
 
 # ---------------------------- MEDIUM TASK ----------------------------------- #
 
-# Loading the sample data
-data(students)
-data(scores)
-data(attendance)
+# # Loading the sample data
+# data(students)
+# data(scores)
+# data(attendance)
 
-result <- merge_all_tables(students, scores, attendance, merge_type = "left",
-                           final_merge_type = "full")
-print(result)
+# result <- merge_all_tables(students, scores, attendance, merge_type = "left",
+#                            final_merge_type = "full")
+# print(result)
 

@@ -1,0 +1,81 @@
+---
+title: "Getting Started with DBmaps"
+author: "Sagar Udasi"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting Started with DBmaps}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Introduction
+
+DBmaps simplifies the analysis of relational database structures by automating table merging operations. This vignette demonstrates the package's core functionality for merging multiple tables efficiently.
+
+## Installation
+
+```{r installation, eval=FALSE}
+# install.packages("devtools")
+devtools::install_github("I-am-Sagar/DBmaps")
+library(DBmaps)
+```
+
+# Merging Tables with DBmaps
+
+The `merge_all_tables()` function allows you to merge three tables in one operation. Here's how to use it:
+
+```{r example}
+# Load sample data
+data(students)
+data(scores)
+data(attendance)
+
+# Perform a three-way merge
+result <- merge_all_tables(
+  students, 
+  scores, 
+  attendance,
+  by_col = "id",
+  merge_type = "inner",
+  final_merge_type = "inner"
+)
+
+head(result)
+```
+
+## Merge Types
+
+DBmaps supports four merge types: - `"inner"`: Matches only common rows - `"left"`: Keeps all rows from first table - `"right"`: Keeps all rows from second table - `"full"`: Keeps all rows from both tables
+
+Example with different merge types:
+
+```{r merge_example}
+# Left join followed by full join
+result_alt <- merge_all_tables(
+  students, 
+  scores, 
+  attendance,
+  merge_type = "left",
+  final_merge_type = "full"
+)
+```
+
+# Best Practices
+
+1.  Verify unique identifiers in your key columns
+2.  Check for NA values in final dataset
+3.  Consider merge order for optimal results
+
+# Session Info
+
+```{r session_info}
+sessionInfo()
+```
