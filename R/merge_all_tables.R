@@ -46,8 +46,7 @@ merge_all_tables <- function(x, y, z, by_col = "id", merge_type = "inner",
     "left" = merge(merged_xy, z, by = by_col, all.x = TRUE),
     "right" = merge(merged_xy, z, by = by_col, all.y = TRUE),
     "full" = merge(merged_xy, z, by = by_col, all = TRUE),
-    stop("Invalid final_merge_type. Choose from 'inner', 'left', 'right', or
-         'full'.")
+    stop("Invalid final_merge_type. Choose from 'inner', 'left', 'right', or 'full'.")
   )
 
   return(final_merge)
