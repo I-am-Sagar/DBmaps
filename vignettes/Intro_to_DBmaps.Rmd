@@ -25,7 +25,7 @@ DBmaps simplifies the analysis of relational database structures by automating t
 
 ```{r installation, eval=FALSE}
 # install.packages("devtools")
-devtools::install_github("I-am-Sagar/DBmaps")
+devtools::install_github("I-am-Sagar/DBmaps", build_vignettes = TRUE)
 ```
 
 # Merging Tables with DBmaps
